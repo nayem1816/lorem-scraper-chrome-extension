@@ -1,0 +1,17 @@
+{
+  "name": "Lorem Ipsum website scraper",
+  "description": "Scrapes the Lorem Ipsum website for random text",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "declarativeContent"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.lipsum.com/*"],
+      "js": ["popup.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
